@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-import SideBar from "./SideBar/SideBar"
-import Content from "./Content/Content"
+import NavBar from './NavBar/NavBar';
+import Homepage from "./Content/Homepage/Homepage"
+import Page from "./Content/Page/Page"
+
 
 export default class App extends React.Component {
 	
@@ -12,9 +14,10 @@ export default class App extends React.Component {
 			<div id="app">
 
 				<Router>
-					<SideBar/>
+					<NavBar/>
 					<Switch>
-						<Route path="/:crypto" component={Content}/>
+						<Route exact path="/" component={Homepage}/>
+						<Route path="/:page" component={Page}/>
 					</Switch>
 				</Router>
 			</div>
