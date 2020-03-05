@@ -1,13 +1,13 @@
 <template>
    <header id="navbar">
-            <span><router-link to="/">VueJS</router-link></span>
-            <ul>
-               <li><router-link to="/page1">Link 1</router-link></li>
-               <li><router-link to="/page2">Link 2</router-link></li>
-               <li><router-link to="/page3">Link 3</router-link></li>
-               <li><router-link to="/page4">Link 4</router-link></li>
-            </ul>
-         </header>
+      <span><router-link :to="{name: 'home'}">VueJS</router-link></span>
+      <ul>
+         <li><router-link :to="{name: 'content', params: { page: 'page1'}}">Link 1</router-link></li>
+         <li><router-link :to="{name: 'content', params: { page: 'page2'}}">Link 2</router-link></li>
+         <li><router-link :to="{name: 'content', params: { page: 'page3'}}">Link 3</router-link></li>
+         <li><router-link :to="{name: 'content', params: { page: 'page4'}}">Link 4</router-link></li>
+      </ul>
+   </header>
 </template>
 
 <script>
