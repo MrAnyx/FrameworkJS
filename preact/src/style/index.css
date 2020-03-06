@@ -1,20 +1,13 @@
-html, body {
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	background: #FAFAFA;
-	font-family: 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-	color: #444;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+@font-face {
+	font-family: ProductSans;
+	src: url("../assets/ProductSans-Regular.ttf");
 }
 
-* {
+/* Reset Style */
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: ProductSans;
 	box-sizing: border-box;
-}
-
-#app {
-	height: 100%;
+	vertical-align: middle;
 }
