@@ -1,6 +1,6 @@
 <script>
 
-import {afterUpdate} from "svelte";
+import { afterUpdate } from "svelte";
 import data from "../assets/data.js"
 
 export let page;
@@ -9,9 +9,6 @@ let content = ""
 afterUpdate(() => {
    content = data[page]
 });
-
-
-
 
 </script>
 
