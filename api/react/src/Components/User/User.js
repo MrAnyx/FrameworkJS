@@ -1,30 +1,40 @@
 import React from "react"
 import "./user.css"
+import LoadingComponent from "../LoadingComponent/LoadingComponent"
+
 
 export default class User extends React.Component {
 
    constructor(){
       super()
+      this.t0 = performance.now()
       this.state = {
-         user: []
+         user: [],
+         loading: true
       }
+
+      
+
+      this.content = <LoadingComponent/>
    }
 
    componentWillMount() {
       fetch(`https://api.github.com/users/${this.props.match.params.user}`)
       .then(result => result.json())
       .then(response => {
-         this.setState({ user: response }, () => {
-            console.log(this.state.user)
-         })
+         this.setState({ user: response, loading: false })
       })
    }
 
+   componentDidMount(){
+      console.log(performance.now() - this.t0)
+   }
+
    render() {
-      return (
 
-
-         <div className="columns is-mobile is-centered">
+      if(!this.state.loading){
+         this.content = (
+            <div className="columns is-mobile is-centered">
             <div className="column is-half">
 
                <div className="card user">
@@ -52,6 +62,15 @@ export default class User extends React.Component {
 
             </div>
          </div>
+         )
+      }
+
+      return (
+
+         <div>
+            {this.content}
+         </div>
+         
 
       )
    }
