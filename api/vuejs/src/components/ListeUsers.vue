@@ -1,9 +1,19 @@
 <template>
-   <div>
-      <ul>
-         <li v-for-key="user in users">{{ user.login }}</li>
-      </ul>
-   </div>
+   <section class="section">
+         <div class="container">
+            <div class="columns is-multiline">
+               <div class="column is-3" v-for="(user, index) in users" v-bind:key="index">
+                  <router-link :to="{name: 'user', params: {user: user.login}}">
+                     <div class="card navbar-item">
+                        <div class="card-content">
+                           {{ user.login }}
+                        </div>      
+                     </div> 
+                  </router-link>
+               </div>
+            </div>
+         </div>
+      </section>
 </template>
 
 <script>
@@ -19,7 +29,6 @@ export default {
       .then(response => response.json())
       .then(result => {
          this.users = result
-         console.log(this.users)
       })
    }
 }
