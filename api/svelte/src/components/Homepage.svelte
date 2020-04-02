@@ -7,7 +7,7 @@
             <div class="hero-body">
                <div class="container has-text-centered">
                   <h1 class="title">
-                     Vue application
+                     Svelte application
                   </h1>
                   <div class="subtitle has-text-centered">
                      <a class="button is-white" href="/users">List of Users</a>

@@ -3,13 +3,17 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-header',
   template: `
+    <!-- header -->
     <nav class="navbar is-dark">
+
+      <!-- logo -->
       <div class="navbar-brand">
-         <a class="navbar-item" routerLink="">
-            <img src="/assets/logo.png"/>
-         </a>
+        <a class="navbar-item" routerLink="">
+          <img src="./assets/logo.png">
+        </a>
       </div>
-   </nav>
+      
+    </nav>
   `,
   styles: []
 })

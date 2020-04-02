@@ -1,6 +1,6 @@
 <script>
 import { Link } from "svelte-routing"
-import image from "../../public/assets/logo.png"
+import src from "../../public/assets/logo.png"
 </script>
 
 <main>
@@ -8,7 +8,7 @@ import image from "../../public/assets/logo.png"
 <nav class="navbar is-dark">
    <div class="navbar-brand">
       <a class="navbar-item" href="/" replace>
-         <img src="{image}" alt="navbar logo"/>
+         <img {src} alt="navbar logo"/>
       </a>
    </div>
 </nav>

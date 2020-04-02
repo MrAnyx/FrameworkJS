@@ -3,21 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { FooterComponent } from './footer/footer.component';
-import { ListeUsersComponent } from './liste-users/liste-users.component';
-
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { UsersListeComponent } from './components/users-liste/users-liste.component';
+import { UserComponent } from './components/user/user.component';
 import { UserService } from './user.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomepageComponent,
     FooterComponent,
-    ListeUsersComponent
+    HomeComponent,
+    UsersListeComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -30,4 +32,3 @@ import { HttpClientModule } from '@angular/common/http';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-  

@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomepageComponent } from './homepage/homepage.component';
-import { ListeUsersComponent } from './liste-users/liste-users.component';
+import { HomeComponent } from './components/home/home.component';
+import { UsersListeComponent } from './components/users-liste/users-liste.component';
+import { UserComponent } from './components/user/user.component';
 
 
 const routes: Routes = [
   {
     path: "",
-    component: HomepageComponent
+    component: HomeComponent
   },
   {
     path: "users",
-    component: ListeUsersComponent
+    component: UsersListeComponent
+  },
+  {
+    path: "users/:user",
+    component: UserComponent
   }
 ];
 
