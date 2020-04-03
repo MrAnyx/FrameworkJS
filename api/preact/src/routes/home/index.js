@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import style from './style';
+import {Link} from "preact-router"
 
 
 
@@ -7,15 +8,15 @@ export default class Home extends Component {
 
 	render({}, {}) {
 		return (
-			<section class="hero is-success is-bold is-medium">
-				<div class="hero-body">
-					<div class="container has-text-centered">
-						<h1 class="title">
+			<section className="hero is-success is-bold is-medium">
+				<div className="hero-body">
+					<div className="container has-text-centered">
+						<h1 className="title">
 							Preact application
 						</h1>
-						<div class="subtitle has-text-centered">
-							<Link class="button is-white" href="/users">List of Users</Link>
-							<Link class="button is-white" href="/user/MrAnyx">My Info</Link>
+						<div className="subtitle has-text-centered">
+							<Link className="button is-white" style={{"margin": "20px 10px"}} href="/users">List of Users</Link>
+							<Link className="button is-white" style={{"margin": "20px 10px"}} href="/user/MrAnyx">My Info</Link>
 						</div>
 					</div>
 				</div>
